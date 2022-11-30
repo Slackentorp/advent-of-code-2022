@@ -1,0 +1,24 @@
+{
+  "name": "advent-of-code-2022",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Slackentorp/advent-of-code-2022.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Slackentorp/advent-of-code-2022/issues"
+  },
+  "homepage": "https://github.com/Slackentorp/advent-of-code-2022#readme",
+  "devDependencies": {
+    "typecript": "^0.0.1-security",
+    "typescript": "^4.9.3"
+  }
+}
