@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/Slackentorp/advent-of-code-2022#readme",
   "devDependencies": {
+    "ts-node": "^10.9.1",
     "typecript": "^0.0.1-security",
     "typescript": "^4.9.3"
   }
