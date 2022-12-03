@@ -1,7 +1,6 @@
 import * as fs from "fs";
 import path from "path";
 
-console.log("Glædelig jul");
 const file = fs.readFileSync(path.resolve(__dirname, "./data.txt"), "utf-8");
 
 const data = file.replace(/\r/g, "").split("\n");
