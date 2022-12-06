@@ -7,10 +7,9 @@ let stack = data.slice(0, idx);
 const instructions = data.slice(idx + 1);
 
 console.log(stack);
-console.log(instructions);
+// console.log(instructions);
 
 const arr = new Array<Array<string>>();
-// const cols = new Array<number>();
 const columns = [...stack[stack.length - 1]]
   .filter((x) => {
     if (typeof +x === "number" && +x > 0) {
@@ -19,23 +18,27 @@ const columns = [...stack[stack.length - 1]]
   })
   .map((x) => +x);
 
-const firstRow = [...stack[0]].slice(0, 4);
-console.log(firstRow);
-// ((r, i) => {
-//     if ()
-//   console.log(r);
-// });
+const st = stack.map(s =>
+  [...s].filter((_, i) => i % 4 === 1)
+);
 
-// stack.map((s, i) => {
-//   if (i >= stack.length - 1) return;
 
-//   const row = new Array<string>(columns.length);
+// console.log([...st, columns]);
 
-//   [...s].map((a, j) => {
-//     row[columns.length * j - 1]
-//   })
-//   console.log([...s].length);
-//   console.log(columns.length * 4 - 1);
-// });
+const moves = instructions.map(x => x.split(' ').filter(i => !isNaN(+i)).map(nr => +nr));
 
-console.log(columns);
+moves.map(move => {
+  const amount = move[0];
+  const from = move[1];
+  const to = move[2];
+
+  for (let i: number = 0; i < amount; i++) {
+    const p = st[from].pop();
+    if (p)
+      st[to].push(p);
+
+    console.log(st); 
+  }
+
+});
+console.log(moves);
