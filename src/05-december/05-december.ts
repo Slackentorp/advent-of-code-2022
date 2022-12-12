@@ -23,7 +23,6 @@ const st = stack.map(s =>
 );
 
 
-// console.log([...st, columns]);
 
 const moves = instructions.map(x => x.split(' ').filter(i => !isNaN(+i)).map(nr => +nr));
 
